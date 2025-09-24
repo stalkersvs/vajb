@@ -1,0 +1,39 @@
+// Colors
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$button-gradient: linear-gradient(45deg, #667eea, #764ba2);
+$gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+$white: #ffffff;
+$white-10: rgba(255, 255, 255, 0.1);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-80: rgba(255, 255, 255, 0.8);
+
+$error-color: #ff6b6b;
+
+// Glass effect
+$glass-bg: rgba(255, 255, 255, 0.1);
+$glass-border: 1px solid rgba(255, 255, 255, 0.2);
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-xxl: 30px;
+$spacing-xxxl: 40px;
+
+// Border radius
+$radius-sm: 10px;
+$radius-md: 15px;
+$radius-lg: 20px;
+
+// Font sizes
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 18px;
+$font-xl: 28px;
+
+// Transitions
+$transition-fast: 0.3s ease;

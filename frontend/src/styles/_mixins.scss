@@ -1,0 +1,47 @@
+@mixin glass-effect {
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+  border: $glass-border;
+  box-shadow: $glass-shadow;
+}
+
+@mixin glass-input {
+  background: $white-10;
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: $radius-sm;
+  color: $white;
+  font-size: $font-md;
+  box-sizing: border-box;
+  
+  &::placeholder {
+    color: $white-80;
+  }
+}
+
+@mixin glass-button {
+  background: $button-gradient;
+  border: none;
+  border-radius: $radius-sm;
+  color: $white;
+  font-size: $font-md;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-fast;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin full-screen-gradient {
+  background: $gradient-bg;
+  min-height: 100vh;
+  @include flex-center;
+}

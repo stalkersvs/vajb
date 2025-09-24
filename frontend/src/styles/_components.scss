@@ -1,0 +1,197 @@
+// Auth pages - using Tailwind classes with custom SCSS
+.auth-page {
+  @apply min-h-screen flex items-center justify-center p-5;
+  background: $gradient-bg;
+}
+
+.auth-card {
+  @apply bg-glass-bg backdrop-blur-glass border border-glass-border rounded-2xl p-10 max-w-md w-full;
+}
+
+.auth-title {
+  @apply text-white text-center mb-8 text-3xl font-light;
+}
+
+.auth-form {
+  .form-input {
+    @apply w-full p-4 mb-4 border-0 rounded-lg bg-glass-bg backdrop-blur-sm text-white text-base;
+    box-sizing: border-box;
+    
+    &::placeholder {
+      color: $white-80;
+    }
+    
+    &:last-of-type {
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  .form-button {
+    @apply w-full p-4 mb-5 border-0 rounded-lg text-white text-base font-semibold cursor-pointer transition-all duration-300;
+    background: $button-gradient;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.auth-link {
+  @apply bg-transparent border-0 cursor-pointer text-sm underline text-center block w-full;
+  color: $white-80;
+}
+
+.auth-error {
+  @apply text-red-400 mt-4 text-center text-sm;
+}
+
+// Dashboard - using Tailwind classes with custom SCSS
+.dashboard-page {
+  @apply min-h-screen p-5;
+  background: $gradient-bg;
+}
+
+.dashboard-card {
+  @apply bg-glass-bg backdrop-blur-glass border border-glass-border rounded-2xl p-8 mb-5;
+}
+
+.dashboard-nav {
+  @apply flex gap-4 mb-5 flex-wrap;
+  
+  .nav-button {
+    @apply px-6 py-3 border-0 rounded-lg text-white cursor-pointer transition-all duration-300 no-underline;
+    background: $white-10;
+    
+    &.active {
+      background: $white-20;
+    }
+  }
+  
+  .logout-button {
+    @apply px-6 py-3 border-0 rounded-lg text-white cursor-pointer transition-all duration-300 ml-auto;
+    background: rgba(255, 107, 107, 0.2);
+  }
+}
+
+.dashboard-content {
+  .content-title {
+    @apply text-white mb-5;
+  }
+  
+  .content-card {
+    @apply rounded-lg p-5 text-white;
+    background: $white-10;
+    
+    pre {
+      @apply m-0 text-sm;
+    }
+  }
+}
+
+// Loading states
+.loading-page {
+  @apply min-h-screen flex items-center justify-center text-white text-lg;
+  background: $gradient-bg;
+}
+
+// Admin styles - using Tailwind classes with custom SCSS
+.admin-table {
+  @apply w-full border-collapse text-white;
+  
+  th, td {
+    @apply text-left p-3;
+    border-bottom: 1px solid $white-10;
+  }
+  
+  th {
+    @apply font-semibold;
+  }
+  
+  .admin-button {
+    @apply px-3 py-2 border-0 rounded-lg text-white cursor-pointer transition-all duration-300 text-sm;
+    background: $button-gradient;
+  }
+}
+
+.admin-reload {
+  @apply mb-3;
+  
+  .reload-button {
+    @apply px-4 py-2 border-0 rounded-lg text-white cursor-pointer transition-all duration-300 text-sm;
+    background: $button-gradient;
+  }
+}
+
+// Modal styles
+.modal-backdrop {
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-container {
+  @apply bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 bg-glass-bg  border-glass-border rounded-2xl;
+  backdrop-filter: blur(20px);
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-6 border-b  border-glass-border rounded-2xl;
+}
+
+.modal-title {
+  @apply text-xl font-semibold;
+  color: $white;
+}
+
+.modal-close {
+  @apply text-2xl font-light cursor-pointer transition-colors duration-200;
+  
+  &:hover {
+    color: $white;
+  }
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+.modal-message {
+  @apply text-base leading-relaxed;
+}
+
+.modal-footer {
+  @apply flex gap-3 p-6 pt-0;
+}
+
+.modal-button {
+  @apply px-6 py-3 rounded-lg font-medium cursor-pointer transition-all duration-200;
+  
+  &.modal-button-cancel {
+    @apply bg-transparent border border-gray-300 text-gray-700  border-glass-border rounded-2xl; 
+    background: rgba(255, 255, 255, 0.1);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: $white;
+    }
+  }
+  
+  &.modal-button-primary {
+    @apply text-white;
+    background: $button-gradient;
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+  
+  &.modal-button-danger {
+    @apply text-white;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    
+    &:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(45deg, #ff5252, #e53935);
+    }
+  }
+}
